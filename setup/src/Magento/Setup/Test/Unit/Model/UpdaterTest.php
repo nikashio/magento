@@ -20,13 +20,13 @@ class UpdaterTest extends \PHPUnit\Framework\TestCase
                 [
                     [
                         'name' => 'update',
-                        'params' => ['components' => [['name' => 'vendor/package', 'version' => 'dev-master']]]
+                        'params' => ['components' => [['name' => 'vendor/package', 'version' => 'Dev-master']]]
                     ]
                 ]
             );
         $updater = new Updater($queue);
         $updater->createUpdaterTask(
-            [['name' => 'vendor/package', 'version' => 'dev-master']],
+            [['name' => 'vendor/package', 'version' => 'Dev-master']],
             Updater::TASK_TYPE_UPDATE
         );
     }

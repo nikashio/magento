@@ -6,7 +6,7 @@
 
 return [
     [
-        'section' => 'dev',
+        'section' => 'Dev',
         'groups' => [
             'log' => [
                 'fields' => [
@@ -23,14 +23,14 @@ return [
             ],
         ],
         'expected' => [
-            'dev/log' => [
-                'dev/log/active' => '1',
-                'dev/log/file' => 'fileName.log',
-                'dev/log/exception_file' => 'exceptionFileName.log',
+            'Dev/log' => [
+                'Dev/log/active' => '1',
+                'Dev/log/file' => 'fileName.log',
+                'Dev/log/exception_file' => 'exceptionFileName.log',
             ],
-            'dev/debug' => [
-                'dev/debug/template_hints_storefront' => '1',
-                'dev/debug/template_hints_blocks' => '0',
+            'Dev/debug' => [
+                'Dev/debug/template_hints_storefront' => '1',
+                'Dev/debug/template_hints_blocks' => '0',
             ],
         ],
     ]

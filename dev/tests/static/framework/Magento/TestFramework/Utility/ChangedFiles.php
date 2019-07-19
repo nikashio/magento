@@ -18,7 +18,7 @@ class ChangedFiles
     /**
      * File path with changed files content.
      */
-    const CHANGED_FILES_CONTENT_FILE = '/dev/tests/static/testsuite/Magento/Test/_files/changed_%s_files_content.json';
+    const CHANGED_FILES_CONTENT_FILE = '/Dev/tests/static/testsuite/Magento/Test/_files/changed_%s_files_content.json';
 
     /**
      * Returns array of PHP-files, that use or declare Magento application classes and Magento libs

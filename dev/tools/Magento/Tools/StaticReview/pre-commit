@@ -20,7 +20,7 @@ if (!$included) {
 }
 
 // Installation:
-// vendor/bin/static-review.php hook:install dev/tools/Magento/Tools/StaticReview/pre-commit .git/hooks/pre-commit
+// vendor/bin/static-review.php hook:install Dev/tools/Magento/Tools/StaticReview/pre-commit .git/hooks/pre-commit
 
 // Reference the required classes and the reviews you want to use.
 use League\CLImate\CLImate;

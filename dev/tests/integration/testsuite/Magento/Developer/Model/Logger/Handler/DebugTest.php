@@ -116,7 +116,7 @@ class DebugTest extends \PHPUnit\Framework\TestCase
         $this->inputMock->expects($this->exactly(2))
             ->method('getArgument')
             ->withConsecutive([ConfigSetCommand::ARG_PATH], [ConfigSetCommand::ARG_VALUE])
-            ->willReturnOnConsecutiveCalls('dev/debug/debug_logging', 1);
+            ->willReturnOnConsecutiveCalls('Dev/debug/debug_logging', 1);
         $this->inputMock->expects($this->exactly(3))
             ->method('getOption')
             ->withConsecutive(
@@ -142,7 +142,7 @@ class DebugTest extends \PHPUnit\Framework\TestCase
         $this->mode->enableProductionModeMinimal();
         $this->logger->debug($message);
         $this->assertFileNotExists($this->getDebuggerLogPath());
-        $this->assertFalse((bool)$this->appConfig->getValue('dev/debug/debug_logging'));
+        $this->assertFalse((bool)$this->appConfig->getValue('Dev/debug/debug_logging'));
 
         $this->enableDebugging();
         $this->logger->debug($message);

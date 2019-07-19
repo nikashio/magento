@@ -33,7 +33,7 @@ class JobRollbackTest extends \PHPUnit_Framework_TestCase
 
     public function testManualRollbackBackupFileUnavailable()
     {
-        $backupFileName = UPDATER_BP . '/dev/tests/integration/testsuite/Magento/Update/_files/backup/' . 'fake.zip';
+        $backupFileName = UPDATER_BP . '/Dev/tests/integration/testsuite/Magento/Update/_files/backup/' . 'fake.zip';
         $maintenanceMode = new \Magento\Update\MaintenanceMode(
             $this->maintenanceFlagFilePath,
             $this->updateErrorFlagFilePath

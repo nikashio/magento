@@ -469,7 +469,7 @@ class TemplateTest extends \PHPUnit\Framework\TestCase
         $registration->register();
 
         // The Vendor_EmailTest/custom_theme adminhtml theme is set in the
-        // dev/tests/integration/testsuite/Magento/Email/Model/_files/design/themes.php file, as it must be set
+        // Dev/tests/integration/testsuite/Magento/Email/Model/_files/design/themes.php file, as it must be set
         // before the adminhtml area is loaded below.
 
         Bootstrap::getInstance()->loadArea(BackendFrontNameResolver::AREA_CODE);

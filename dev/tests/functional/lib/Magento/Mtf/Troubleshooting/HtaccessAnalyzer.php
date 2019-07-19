@@ -29,7 +29,7 @@ class HtaccessAnalyzer extends \Symfony\Component\Console\Command\Command
      *
      * @var string
      */
-    private $commandPath = 'dev/tests/functional/utils/command.php?command=';
+    private $commandPath = 'Dev/tests/functional/utils/command.php?command=';
 
     /**
      * HTTP CURL Adapter.

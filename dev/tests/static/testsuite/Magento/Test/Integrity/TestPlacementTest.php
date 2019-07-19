@@ -15,7 +15,7 @@ use \Magento\Framework\App\Bootstrap;
 class TestPlacementTest extends \PHPUnit\Framework\TestCase
 {
     /** @var array */
-    private $scanList = ['dev/tests/unit/testsuite/Magento'];
+    private $scanList = ['Dev/tests/unit/testsuite/Magento'];
 
     /**
      * @var string Path to project root

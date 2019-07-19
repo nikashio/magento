@@ -3,7 +3,7 @@
 /**
  * Script to get changes between feature branch and the mainline
  *
- * @category   dev
+ * @category   Dev
  * @package    build
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.

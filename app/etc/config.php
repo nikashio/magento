@@ -2,6 +2,7 @@
 return array (
   'modules' => 
   array (
+    'Dev_ProductComment' => 1,
     'Magento_Store' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Directory' => 1,
@@ -108,6 +109,5 @@ return array (
     'Magento_CatalogWidget' => 1,
     'Magento_Wishlist' => 1,
     'Shopial_Facebook' => 1,
-    'dev_ProductComment' => 1,
   ),
 );

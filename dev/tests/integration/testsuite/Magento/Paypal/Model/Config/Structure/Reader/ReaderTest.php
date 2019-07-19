@@ -12,9 +12,9 @@ use Magento\Framework\ObjectManagerInterface;
  */
 class ReaderTest extends \PHPUnit\Framework\TestCase
 {
-    const EXPECTED = '/dev/tests/integration/testsuite/Magento/Paypal/Model/Config/Structure/Reader/_files/expected';
+    const EXPECTED = '/Dev/tests/integration/testsuite/Magento/Paypal/Model/Config/Structure/Reader/_files/expected';
 
-    const ACTUAL = '/dev/tests/integration/testsuite/Magento/Paypal/Model/Config/Structure/Reader/_files/actual';
+    const ACTUAL = '/Dev/tests/integration/testsuite/Magento/Paypal/Model/Config/Structure/Reader/_files/actual';
 
     /**
      * @var ObjectManagerInterface

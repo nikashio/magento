@@ -17,7 +17,7 @@ class Cli
     /**
      * Url to command.php.
      */
-    const URL = 'dev/tests/functional/utils/command.php';
+    const URL = 'Dev/tests/functional/utils/command.php';
 
     /**
      * Curl transport protocol.

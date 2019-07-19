@@ -135,7 +135,7 @@ class ReadTest extends \PHPUnit\Framework\TestCase
     {
         $file = $this->getFileInstance($path);
         $expectedInfo = [
-            'dev',
+            'Dev',
             'ino',
             'mode',
             'nlink',

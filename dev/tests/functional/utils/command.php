@@ -21,7 +21,7 @@ if (isset($_GET['command'])) {
 function escapeCommand($command)
 {
     $escapeExceptions = [
-        '> /dev/null &' => '--dev-null-amp--'
+        '> /Dev/null &' => '--Dev-null-amp--'
     ];
 
     $command = escapeshellcmd(

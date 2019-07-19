@@ -13,7 +13,7 @@ $magentoObjectManagerFactory = \Magento\Framework\App\Bootstrap::createObjectMan
 $magentoObjectManager = $magentoObjectManagerFactory->create($_SERVER);
 // Remove previously generated static classes
 $fs = $magentoObjectManager->create(Filesystem::class);
-$fs->getDirectoryWrite(DirectoryList::ROOT)->delete('dev/tests/functional/generated/');
+$fs->getDirectoryWrite(DirectoryList::ROOT)->delete('Dev/tests/functional/generated/');
 // Generate factories for old end-to-end tests
 $magentoObjectManager->create(\Magento\Mtf\Util\Generate\Factory::class)->launch();
 

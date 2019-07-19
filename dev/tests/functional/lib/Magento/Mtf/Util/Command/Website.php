@@ -17,7 +17,7 @@ class Website
     /**
      * Url to website.php.
      */
-    const URL = 'dev/tests/functional/utils/website.php';
+    const URL = 'Dev/tests/functional/utils/website.php';
 
     /**
      * Curl transport protocol.

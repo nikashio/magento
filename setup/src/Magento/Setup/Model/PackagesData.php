@@ -223,7 +223,7 @@ class PackagesData
     {
         $versionParser = new \Composer\Package\Version\VersionParser();
         foreach ($this->getPackageAvailableVersions($package) as $version) {
-            if ($versionParser->parseStability($version) != 'dev') {
+            if ($versionParser->parseStability($version) != 'Dev') {
                 return $version;
             }
         }
@@ -352,7 +352,7 @@ class PackagesData
     }
 
     /**
-     * Unset dev versions
+     * Unset Dev versions
      *
      * @param array $package
      * @return array
@@ -360,7 +360,7 @@ class PackagesData
     protected function unsetDevVersions($package)
     {
         foreach ($package as $key => $version) {
-            if (strpos($key, 'dev') !== false) {
+            if (strpos($key, 'Dev') !== false) {
                 unset($package[$key]);
             }
         }

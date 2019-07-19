@@ -22,7 +22,7 @@ class StaticProperties
      * @var array
      */
     protected static $_cleanableFolders = [
-        '/dev/tests/integration/framework' => [],
+        '/Dev/tests/integration/framework' => [],
     ];
 
     protected static $backupStaticVariables = [];

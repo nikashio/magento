@@ -30,7 +30,7 @@ class DataTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture current_store dev/restrict/allow_ips 192.168.0.1
+     * @magentoConfigFixture current_store Dev/restrict/allow_ips 192.168.0.1
      * @magentoAppIsolation enabled
      */
     public function testIsDevAllowedTrue()
@@ -45,7 +45,7 @@ class DataTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture current_store dev/restrict/allow_ips 192.168.0.1
+     * @magentoConfigFixture current_store Dev/restrict/allow_ips 192.168.0.1
      * @magentoAppIsolation enabled
      */
     public function testIsDevAllowedFalse()

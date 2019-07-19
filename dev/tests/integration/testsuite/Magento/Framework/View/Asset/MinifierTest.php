@@ -143,7 +143,7 @@ class MinifierTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture current_store dev/css/minify_files 0
+     * @magentoConfigFixture current_store Dev/css/minify_files 0
      * @magentoAppIsolation enabled
      */
     public function testCssMinificationOff()
@@ -167,7 +167,7 @@ class MinifierTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture current_store dev/css/minify_files 1
+     * @magentoConfigFixture current_store Dev/css/minify_files 1
      */
     public function testCssMinification()
     {
@@ -187,7 +187,7 @@ class MinifierTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture current_store dev/css/minify_files 1
+     * @magentoConfigFixture current_store Dev/css/minify_files 1
      */
     public function testCssMinificationForMinifiedFiles()
     {
@@ -203,7 +203,7 @@ class MinifierTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture current_store dev/css/minify_files 1
+     * @magentoConfigFixture current_store Dev/css/minify_files 1
      */
     public function testDeploymentWithMinifierEnabled()
     {

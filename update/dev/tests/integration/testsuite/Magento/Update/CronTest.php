@@ -44,7 +44,7 @@ class CronTest extends \PHPUnit_Framework_TestCase
             mkdir($this->backupPath, 0777, true);
         }
 
-        $this->cronScript = UPDATER_BP . '/dev/tests/integration/framework/cron.php';
+        $this->cronScript = UPDATER_BP . '/Dev/tests/integration/framework/cron.php';
         $this->backupToRollback = $this->backupPath . '/BackupToRollback.zip';
         $this->backupToRemoveA = $this->backupPath . '/BackupToRemoveA.zip';
         $this->backupToRemoveB = $this->backupPath . '/BackupToRemoveB.zip';

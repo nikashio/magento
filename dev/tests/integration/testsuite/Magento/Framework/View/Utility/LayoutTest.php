@@ -20,7 +20,7 @@ class LayoutTest extends \PHPUnit\Framework\TestCase
         \Magento\TestFramework\Helper\Bootstrap::getInstance()->reinitialize(
             [
                 Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS => [
-                    DirectoryList::APP => ['path' => BP . '/dev/tests/integration'],
+                    DirectoryList::APP => ['path' => BP . '/Dev/tests/integration'],
                 ],
             ]
         );

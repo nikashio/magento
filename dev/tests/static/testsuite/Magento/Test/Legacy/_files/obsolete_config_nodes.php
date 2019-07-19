@@ -49,7 +49,7 @@ return [
     '/config/global/ignore_user_agents' => 'This configuration moved to Di configuration of \Magento\Log\Model\Visitor',
     '/config/global/request' => 'This configuration moved to Di configuration of \Magento\Framework\App\RequestInterface',
     '/config/global/secure_url' => 'This configuration moved to Di configuration of \Magento\Framework\Url\SecurityInfo',
-    '/config/global/dev' => 'This configuration moved to Di configuration of \Magento\Framework\App\Action\Context',
+    '/config/global/Dev' => 'This configuration moved to Di configuration of \Magento\Framework\App\Action\Context',
     '/config/global/webapi' => 'This configuration moved to Di configuration of \Magento\Webapi\Controller\Request\Rest\Interpreter\Factory' .
     ' and \Magento\Webapi\Controller\Response\Rest\Renderer\Factory',
     '/config/global/cms' => 'This configuration moved to Di configuration of \Magento\Cms\Model\Wysiwyg\Images\Storage' .
@@ -102,6 +102,6 @@ return [
     '/config/global/currency/import/services' => 'Configurations moved to DI file settings',
     '/config/global/template' => 'Use /config/template of email_templates.xml',
     '/config/default/general/file/sitemap_generate_valid_paths' => '/config/default/sitemap/file/valid_paths',
-    '/config/dev/css/minify_adapter' => 'Was replaced using di',
-    '/config/dev/js/minify_adapter' => 'Was replaced using di',
+    '/config/Dev/css/minify_adapter' => 'Was replaced using di',
+    '/config/Dev/js/minify_adapter' => 'Was replaced using di',
 ];

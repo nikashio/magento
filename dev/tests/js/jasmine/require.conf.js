@@ -15,8 +15,8 @@ require.config({
         ]
     },
     paths: {
-        'dev/tests/js/jasmine': '../../../../../../dev/tests/js/jasmine',
-        'tests': '../../../../../../dev/tests/js/jasmine',
+        'dev/tests/js/jasmine': '../../../../../../Dev/tests/js/jasmine',
+        'tests': '../../../../../../Dev/tests/js/jasmine',
         'squire': '../../../../../../node_modules/squirejs/src/Squire'
     },
     shim: {

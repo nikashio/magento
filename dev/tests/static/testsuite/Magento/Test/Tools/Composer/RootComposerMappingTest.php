@@ -19,7 +19,7 @@ class RootComposerMappingTest extends \PHPUnit\Framework\TestCase
     public function testMapping()
     {
         //Checking existence of composer components
-        $reader = new Reader(BP . '/dev/tools/Magento/Tools/Composer');
+        $reader = new Reader(BP . '/Dev/tools/Magento/Tools/Composer');
         $patterns = $reader->getPatterns();
         $counter = 0;
         $count = count($patterns);

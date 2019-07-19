@@ -26,7 +26,7 @@ class Locales
     /**
      * Url to locales.php.
      */
-    const URL = 'dev/tests/functional/utils/locales.php';
+    const URL = 'Dev/tests/functional/utils/locales.php';
 
     /**
      * Curl transport protocol.

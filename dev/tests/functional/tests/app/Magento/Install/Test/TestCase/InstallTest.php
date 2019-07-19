@@ -22,7 +22,7 @@ use Magento\Mtf\Client\BrowserInterface;
 
 /**
  * PLEASE ADD NECESSARY INFO BEFORE RUNNING TEST TO
- * ../dev/tests/functional/config/config.xml
+ * ../Dev/tests/functional/config/config.xml
  *
  * Preconditions:
  * 1. Uninstall Magento.

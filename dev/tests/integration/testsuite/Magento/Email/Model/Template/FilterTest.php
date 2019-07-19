@@ -285,7 +285,7 @@ class FilterTest extends \PHPUnit\Framework\TestCase
      * @magentoComponentsDir Magento/Email/Model/_files/design
      * @magentoAppIsolation enabled
      * @magentoDbIsolation enabled
-     * @magentoConfigFixture default_store dev/static/sign 0
+     * @magentoConfigFixture default_store Dev/static/sign 0
      * @dataProvider inlinecssDirectiveDataProvider
      *
      * @param string $templateText

@@ -45,9 +45,9 @@ class RollbackTest extends \PHPUnit_Framework_TestCase
     protected function setup()
     {
         parent::setUp();
-        $this->backupPath = UPDATER_BP . '/dev/tests/integration/testsuite/Magento/Update/_files/backup/';
-        $this->archivedDir = UPDATER_BP . '/dev/tests/integration/testsuite/Magento/Update/_files/archived/';
-        $this->excludedDir = UPDATER_BP . '/dev/tests/integration/testsuite/Magento/Update/_files/archived/excluded/';
+        $this->backupPath = UPDATER_BP . '/Dev/tests/integration/testsuite/Magento/Update/_files/backup/';
+        $this->archivedDir = UPDATER_BP . '/Dev/tests/integration/testsuite/Magento/Update/_files/archived/';
+        $this->excludedDir = UPDATER_BP . '/Dev/tests/integration/testsuite/Magento/Update/_files/archived/excluded/';
 
         if (!is_dir($this->backupPath)) {
             mkdir($this->backupPath);

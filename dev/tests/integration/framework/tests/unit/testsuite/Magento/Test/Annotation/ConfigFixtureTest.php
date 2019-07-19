@@ -60,7 +60,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture current_store dev/restrict/allow_ips 192.168.0.1
+     * @magentoConfigFixture current_store Dev/restrict/allow_ips 192.168.0.1
      */
     public function testCurrentStoreConfig()
     {
@@ -69,7 +69,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
         )->method(
             '_getConfigValue'
         )->with(
-            'dev/restrict/allow_ips',
+            'Dev/restrict/allow_ips',
             ''
         )->will(
             $this->returnValue('127.0.0.1')
@@ -79,7 +79,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
         )->method(
             '_setConfigValue'
         )->with(
-            'dev/restrict/allow_ips',
+            'Dev/restrict/allow_ips',
             '192.168.0.1',
             ''
         );
@@ -90,7 +90,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
         )->method(
             '_setConfigValue'
         )->with(
-            'dev/restrict/allow_ips',
+            'Dev/restrict/allow_ips',
             '127.0.0.1',
             ''
         );
@@ -98,7 +98,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoConfigFixture admin_store dev/restrict/allow_ips 192.168.0.2
+     * @magentoConfigFixture admin_store Dev/restrict/allow_ips 192.168.0.2
      */
     public function testSpecificStoreConfig()
     {
@@ -107,7 +107,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
         )->method(
             '_getConfigValue'
         )->with(
-            'dev/restrict/allow_ips',
+            'Dev/restrict/allow_ips',
             'admin'
         )->will(
             $this->returnValue('192.168.0.1')
@@ -117,7 +117,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
         )->method(
             '_setConfigValue'
         )->with(
-            'dev/restrict/allow_ips',
+            'Dev/restrict/allow_ips',
             '192.168.0.2',
             'admin'
         );
@@ -128,7 +128,7 @@ class ConfigFixtureTest extends \PHPUnit\Framework\TestCase
         )->method(
             '_setConfigValue'
         )->with(
-            'dev/restrict/allow_ips',
+            'Dev/restrict/allow_ips',
             '192.168.0.1',
             'admin'
         );

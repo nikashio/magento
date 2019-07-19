@@ -138,7 +138,7 @@ class ReadTest extends \PHPUnit\Framework\TestCase
     {
         $dir = $this->getDirectoryInstance($dirPath);
         $expectedInfo = [
-            'dev',
+            'Dev',
             'ino',
             'mode',
             'nlink',

@@ -290,7 +290,7 @@ class ComposerTest extends \PHPUnit\Framework\TestCase
                     // Magento Composer Installer is not needed for already existing components
                     continue;
                 }
-                if (!isset(self::$rootJson['require-dev'][$depName]) && !isset(self::$rootJson['require'][$depName])
+                if (!isset(self::$rootJson['require-Dev'][$depName]) && !isset(self::$rootJson['require'][$depName])
                     && !isset(self::$rootJson['replace'][$depName])) {
                     $errors[] = "'$name' depends on '$depName'";
                 }
@@ -299,7 +299,7 @@ class ComposerTest extends \PHPUnit\Framework\TestCase
                 $this->fail(
                     "The following dependencies are missing in root 'composer.json',"
                     . " while declared in child components.\n"
-                    . "Consider adding them to 'require-dev' section (if needed for child components only),"
+                    . "Consider adding them to 'require-Dev' section (if needed for child components only),"
                     . " to 'replace' section (if they are present in the project),"
                     . " to 'require' section (if needed for the skeleton).\n"
                     . join("\n", $errors)

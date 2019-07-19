@@ -16,7 +16,7 @@ class GeneratedCode
     /**
      * Url to deleteMagentoGeneratedCode.php.
      */
-    const URL = 'dev/tests/functional/utils/deleteMagentoGeneratedCode.php';
+    const URL = 'Dev/tests/functional/utils/deleteMagentoGeneratedCode.php';
 
     /**
      * Curl transport protocol.

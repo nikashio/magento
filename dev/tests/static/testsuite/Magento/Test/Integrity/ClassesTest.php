@@ -291,7 +291,7 @@ class ClassesTest extends \PHPUnit\Framework\TestCase
                 $relativePath = str_replace(BP, "", $file);
                 // Due to the examples given with the regex patterns, we skip this test file itself
                 if (preg_match(
-                    '/\/dev\/tests\/static\/testsuite\/Magento\/Test\/Integrity\/ClassesTest.php$/',
+                    '/\/Dev\/tests\/static\/testsuite\/Magento\/Test\/Integrity\/ClassesTest.php$/',
                     $relativePath
                 )) {
                     return;
@@ -560,15 +560,15 @@ class ClassesTest extends \PHPUnit\Framework\TestCase
     {
         // Remove usage of classes that do NOT using fully-qualified class names (possibly under same namespace)
         $directories = [
-            BP . '/dev/tools/',
-            BP . '/dev/tests/api-functional/framework/',
-            BP . '/dev/tests/functional/',
-            BP . '/dev/tests/integration/framework/',
-            BP . '/dev/tests/integration/framework/tests/unit/testsuite/',
-            BP . '/dev/tests/integration/testsuite/',
-            BP . '/dev/tests/integration/testsuite/Magento/Test/Integrity/',
-            BP . '/dev/tests/static/framework/',
-            BP . '/dev/tests/static/testsuite/',
+            BP . '/Dev/tools/',
+            BP . '/Dev/tests/api-functional/framework/',
+            BP . '/Dev/tests/functional/',
+            BP . '/Dev/tests/integration/framework/',
+            BP . '/Dev/tests/integration/framework/tests/unit/testsuite/',
+            BP . '/Dev/tests/integration/testsuite/',
+            BP . '/Dev/tests/integration/testsuite/Magento/Test/Integrity/',
+            BP . '/Dev/tests/static/framework/',
+            BP . '/Dev/tests/static/testsuite/',
             BP . '/setup/src/',
         ];
         $libraryPaths = $componentRegistrar->getPaths(ComponentRegistrar::LIBRARY);

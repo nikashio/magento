@@ -16,7 +16,7 @@ class PathChecker
     /**
      * Url to checkPath.php.
      */
-    const URL = 'dev/tests/functional/utils/pathChecker.php';
+    const URL = 'Dev/tests/functional/utils/pathChecker.php';
 
     /**
      * Curl transport protocol.

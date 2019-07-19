@@ -61,7 +61,7 @@ class UrlAnalyzer
         if (preg_match($pattern, $url) === false) {
             $messages['error'][] =
                 'Instance should have domain name with at least one subdomain to function correctly. Examples:'
-                . PHP_EOL . "\tValid: http://magento.dev/, https://mage.local/."
+                . PHP_EOL . "\tValid: http://magento.Dev/, https://mage.local/."
                 . PHP_EOL . "\tInvalid: http://localhost/, https://magento/.";
         }
 

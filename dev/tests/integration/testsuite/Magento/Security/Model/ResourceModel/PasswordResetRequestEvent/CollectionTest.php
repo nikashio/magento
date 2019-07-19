@@ -37,7 +37,7 @@ class CollectionTest extends \PHPUnit\Framework\TestCase
      */
     public function testFilterByAccountReference()
     {
-        $this->collectionModel->filterByAccountReference('test27.dev@gmail.com')
+        $this->collectionModel->filterByAccountReference('test27.Dev@gmail.com')
             ->load();
 
         $this->assertEquals(1, $this->collectionModel->getSize());
@@ -108,7 +108,7 @@ class CollectionTest extends \PHPUnit\Framework\TestCase
      */
     public function testFilterByIpOrAccountReference()
     {
-        $this->collectionModel->filterByIpOrAccountReference('3232249856', 'test273.dev@gmail.com')
+        $this->collectionModel->filterByIpOrAccountReference('3232249856', 'test273.Dev@gmail.com')
             ->load();
         $this->assertEquals(2, $this->collectionModel->getSize());
     }

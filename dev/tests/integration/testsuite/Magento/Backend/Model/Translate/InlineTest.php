@@ -23,7 +23,7 @@ class InlineTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @magentoAdminConfigFixture dev/translate_inline/active_admin 1
+     * @magentoAdminConfigFixture Dev/translate_inline/active_admin 1
      * @covers \Magento\Framework\Translate\Inline::getAjaxUrl
      */
     public function testAjaxUrl()

@@ -24,7 +24,7 @@ class FilesTest extends \PHPUnit\Framework\TestCase
     protected $libTests = [];
 
     /** @var string */
-    protected $rootTestsDir = '#dev/tests/#';
+    protected $rootTestsDir = '#Dev/tests/#';
 
     /** @var string */
     protected $setupTestsDir = '#setup/src/Magento/Setup/Test#';

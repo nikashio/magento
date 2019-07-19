@@ -196,7 +196,7 @@ abstract class AbstractProductExportImportTestCase extends \PHPUnit\Framework\Te
     {
         foreach ($fixtures as $fixture) {
             $fixturePath = $this->fileSystem->getDirectoryRead(DirectoryList::ROOT)
-                ->getAbsolutePath('/dev/tests/integration/testsuite/' . $fixture);
+                ->getAbsolutePath('/Dev/tests/integration/testsuite/' . $fixture);
             include $fixturePath;
         }
     }
@@ -211,7 +211,7 @@ abstract class AbstractProductExportImportTestCase extends \PHPUnit\Framework\Te
     {
         foreach ($fixtures as $fixture) {
             $fixturePath = $this->fileSystem->getDirectoryRead(DirectoryList::ROOT)
-                ->getAbsolutePath('/dev/tests/integration/testsuite/' . $fixture);
+                ->getAbsolutePath('/Dev/tests/integration/testsuite/' . $fixture);
             $fileInfo = pathinfo($fixturePath);
             $extension = '';
             if (isset($fileInfo['extension'])) {

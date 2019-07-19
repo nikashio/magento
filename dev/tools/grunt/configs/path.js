@@ -26,11 +26,11 @@ module.exports = {
         legacy: 'lib/web/legacy-build.min.js'
     },
     doc: 'lib/web/css/docs',
-    spec: 'dev/tests/js/spec',
+    spec: 'Dev/tests/js/spec',
     static: {
-        dir: 'dev/tests/static/testsuite/Magento/Test/Js/_files',
-        whitelist: 'dev/tests/static/testsuite/Magento/Test/Js/_files/whitelist/',
-        blacklist: 'dev/tests/static/testsuite/Magento/Test/Js/_files/blacklist/',
+        dir: 'Dev/tests/static/testsuite/Magento/Test/Js/_files',
+        whitelist: 'Dev/tests/static/testsuite/Magento/Test/Js/_files/whitelist/',
+        blacklist: 'Dev/tests/static/testsuite/Magento/Test/Js/_files/blacklist/',
         tmp: 'validation-files.txt'
     }
 };

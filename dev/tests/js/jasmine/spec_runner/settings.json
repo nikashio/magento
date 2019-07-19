@@ -6,7 +6,7 @@
 
     /**
      * Path to themes configuration module. Relative to Magento root.
-     * This node is replaced by formatted theme configuration by 'dev/tests/jasmine/spec_runner' module
+     * This node is replaced by formatted theme configuration by 'Dev/tests/jasmine/spec_runner' module
      */
     "themes": "dev/tools/grunt/configs/themes",
 

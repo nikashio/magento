@@ -28,22 +28,22 @@ class ConfigTest extends \PHPUnit\Framework\TestCase
         );
         /** @var $_configDataObject \Magento\Config\Model\Config */
         $_configDataObject = Bootstrap::getObjectManager()->create(\Magento\Config\Model\Config::class);
-        $_configData = $_configDataObject->setSection('dev')->setWebsite('base')->load();
+        $_configData = $_configDataObject->setSection('Dev')->setWebsite('base')->load();
         $this->assertEmpty($_configData);
 
         $_configDataObject = Bootstrap::getObjectManager()->create(\Magento\Config\Model\Config::class);
-        $_configDataObject->setSection('dev')->setGroups($groups)->save();
+        $_configDataObject->setSection('Dev')->setGroups($groups)->save();
 
         /** @var $_configDataObject \Magento\Config\Model\Config */
         $_configDataObject = Bootstrap::getObjectManager()->create(\Magento\Config\Model\Config::class);
-        $_configData = $_configDataObject->setSection('dev')->load();
-        $this->assertArrayHasKey('dev/debug/template_hints_admin', $_configData);
-        $this->assertArrayHasKey('dev/debug/template_hints_blocks', $_configData);
+        $_configData = $_configDataObject->setSection('Dev')->load();
+        $this->assertArrayHasKey('Dev/debug/template_hints_admin', $_configData);
+        $this->assertArrayHasKey('Dev/debug/template_hints_blocks', $_configData);
 
         $_configDataObject = Bootstrap::getObjectManager()->create(\Magento\Config\Model\Config::class);
-        $_configData = $_configDataObject->setSection('dev')->setWebsite('base')->load();
-        $this->assertArrayNotHasKey('dev/debug/template_hints_admin', $_configData);
-        $this->assertArrayNotHasKey('dev/debug/template_hints_blocks', $_configData);
+        $_configData = $_configDataObject->setSection('Dev')->setWebsite('base')->load();
+        $this->assertArrayNotHasKey('Dev/debug/template_hints_admin', $_configData);
+        $this->assertArrayNotHasKey('Dev/debug/template_hints_blocks', $_configData);
     }
 
     public function saveWithSingleStoreModeEnabledDataProvider()

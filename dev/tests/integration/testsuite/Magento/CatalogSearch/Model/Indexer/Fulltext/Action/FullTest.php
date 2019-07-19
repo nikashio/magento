@@ -66,7 +66,7 @@ class FullTest extends \PHPUnit\Framework\TestCase
         $attributeRepository = Bootstrap::getObjectManager()->get(ProductAttributeRepositoryInterface::class);
         $skuId = $attributeRepository->get(ProductInterface::SKU)->getAttributeId();
         $nameId = $attributeRepository->get(ProductInterface::NAME)->getAttributeId();
-        /** @see dev/tests/integration/testsuite/Magento/Framework/Search/_files/configurable_attribute.php */
+        /** @see Dev/tests/integration/testsuite/Magento/Framework/Search/_files/configurable_attribute.php */
         $configurableId = $attributeRepository->get('test_configurable')->getAttributeId();
         return [
             'configurable' => [

@@ -220,7 +220,7 @@ class ControllerAclTest extends \PHPUnit\Framework\TestCase
      */
     private function isItTest($relativeFilePath)
     {
-        $isTest = (preg_match('~.*?(/dev/tests/|/Test/Unit/).*?\.php$~', $relativeFilePath) === 1);
+        $isTest = (preg_match('~.*?(/Dev/tests/|/Test/Unit/).*?\.php$~', $relativeFilePath) === 1);
         return $isTest;
     }
 

@@ -16,7 +16,7 @@ class Log
     /**
      * Url to log.php.
      */
-    const URL = 'dev/tests/functional/utils/log.php';
+    const URL = 'Dev/tests/functional/utils/log.php';
 
     /**
      * Curl transport protocol.

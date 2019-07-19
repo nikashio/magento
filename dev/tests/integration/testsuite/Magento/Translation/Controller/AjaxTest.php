@@ -16,12 +16,12 @@ class AjaxTest extends \Magento\TestFramework\TestCase\AbstractController
         )->getStore(
             'default'
         )->getConfig(
-            'dev/translate_inline/active'
+            'Dev/translate_inline/active'
         );
         \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->get(
             \Magento\Framework\App\Config\MutableScopeConfigInterface::class
         )->setValue(
-            'dev/translate_inline/active',
+            'Dev/translate_inline/active',
             true,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             'default'

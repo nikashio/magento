@@ -151,8 +151,8 @@ class Application
         AutoloaderInterface $autoloadWrapper,
         $loadTestExtensionAttributes = false
     ) {
-        if (getcwd() != BP . '/dev/tests/integration') {
-            chdir(BP . '/dev/tests/integration');
+        if (getcwd() != BP . '/Dev/tests/integration') {
+            chdir(BP . '/Dev/tests/integration');
         }
         $this->_shell = $shell;
         $this->installConfigFile = $installConfigFile;
