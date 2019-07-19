@@ -35,3 +35,4 @@ if (file_exists($vendorAutoload)) {
 }
 
 AutoloaderRegistry::registerAutoloader(new ClassLoaderWrapper($composerAutoloader));
+

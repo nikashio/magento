@@ -108,5 +108,6 @@ return array (
     'Magento_CatalogWidget' => 1,
     'Magento_Wishlist' => 1,
     'Shopial_Facebook' => 1,
+    'dev_ProductComment' => 1,
   ),
 );
