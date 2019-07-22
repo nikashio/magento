@@ -64,7 +64,7 @@ class OrderInvoiceCreateTest extends \Magento\TestFramework\TestCase\WebapiAbstr
             'orderId' => $existingOrder->getId(),
             'items' => [],
             'comment' => [
-                'comment' => 'Test Comment',
+                'comment' => 'Test Material',
                 'is_visible_on_front' => 1,
             ],
         ];
@@ -119,7 +119,7 @@ class OrderInvoiceCreateTest extends \Magento\TestFramework\TestCase\WebapiAbstr
             'orderId' => $existingOrder->getId(),
             'items' => [],
             'comment' => [
-                'comment' => 'Test Comment',
+                'comment' => 'Test Material',
                 'is_visible_on_front' => 1,
             ],
         ];

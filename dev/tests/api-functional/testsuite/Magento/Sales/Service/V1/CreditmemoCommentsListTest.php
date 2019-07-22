@@ -28,7 +28,7 @@ class CreditmemoCommentsListTest extends WebapiAbstract
      */
     public function testCreditmemoCommentsList()
     {
-        $comment = 'Credit Memo Comment';
+        $comment = 'Credit Memo Material';
         $objectManager = Bootstrap::getObjectManager();
         /** @var Collection $creditmemoCollection */
         $creditmemoCollection = $objectManager->get(Collection::class);

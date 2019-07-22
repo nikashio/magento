@@ -159,7 +159,7 @@ class AcceptTransactionOnAuthorizenetStep implements TestStepInterface
         $infoTab = $this->salesOrderView->getOrderForm()->openTab('info')->getTab('info');
         $latestComment = $infoTab->getCommentsHistoryBlock()->getLatestComment();
         if (!preg_match('/"(\d+)"/', $latestComment['comment'], $matches)) {
-            throw new \Exception('Comment with transaction id cannot be found.');
+            throw new \Exception('Material with transaction id cannot be found.');
         }
         $transactionId = $matches[1];
         $this->main->open();
