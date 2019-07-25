@@ -7,12 +7,12 @@ use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\View\Element\Template;
 use Magento\Widget\Block\BlockInterface;
 use \Magento\Catalog\Helper\Image;
-use Magento\Framework\Pricing\Helper\Data;
 
-class Posts extends Template implements BlockInterface
+
+class Comments extends Template implements BlockInterface
 {
 
-    protected $_template = "widget/posts.phtml";
+    protected $_template = "widget/Comments.phtml";
     /**
      * @var ProductRepositoryInterface
      */
@@ -80,8 +80,8 @@ class Posts extends Template implements BlockInterface
         } catch (NoSuchEntityException $e) {
             return 'product not found';
         }
-        $image_url = $this->imageHelper->init($_product, 'product_base_image')->getUrl();
-        return $image_url;
+        $imageUrl = $this->imageHelper->init($_product, 'product_base_image')->getUrl();
+        return $imageUrl;
     }
 
 
