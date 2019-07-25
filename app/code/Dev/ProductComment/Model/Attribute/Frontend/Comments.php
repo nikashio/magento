@@ -1,7 +1,7 @@
 <?php
 namespace Dev\ProductComment\Model\Attribute\Frontend;
 
-class Comment extends \Magento\Eav\Model\Entity\Attribute\Frontend\AbstractFrontend
+class Comments extends \Magento\Eav\Model\Entity\Attribute\Frontend\AbstractFrontend
 {
     public function getValue(\Magento\Framework\DataObject $object)
     {
