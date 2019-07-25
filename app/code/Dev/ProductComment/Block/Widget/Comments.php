@@ -73,14 +73,9 @@ class Comments extends Template implements BlockInterface
     }
 
 
-    public function getItemImage($productId)
+    public function getItemImage($product)
     {
-        try {
-            $_product = $this->productRepository->getById($productId);
-        } catch (NoSuchEntityException $e) {
-            return 'product not found';
-        }
-        $imageUrl = $this->imageHelper->init($_product, 'product_base_image')->getUrl();
+        $imageUrl = $this->imageHelper->init($product, 'product_base_image')->getUrl();
         return $imageUrl;
     }
 
