@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
-    <widget class="Dev\ProductComment\Block\Widget\Comments" id="dev_productcomment_posts">
+    <widget class="Dev\ProductComments\Block\Widget\Comments" id="dev_productcomment">
         <label>Comment permition</label>
         <description>Comments</description>
         <parameters>

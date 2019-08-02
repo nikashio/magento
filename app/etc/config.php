@@ -53,7 +53,7 @@ return array (
     'Magento_GroupedImportExport' => 1,
     'Magento_GroupedProduct' => 1,
     'Magento_DownloadableImportExport' => 1,
-    'Dev_ProductComment' => 1,
+    'Dev_ProductComments' => 1,
     'Magento_Security' => 1,
     'Magento_LayeredNavigation' => 1,
     'Magento_Marketplace' => 1,

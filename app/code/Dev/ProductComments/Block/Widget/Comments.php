@@ -1,6 +1,6 @@
 <?php
 
-namespace Dev\ProductComment\Block\Widget;
+namespace Dev\ProductComments\Block\Widget;
 
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;

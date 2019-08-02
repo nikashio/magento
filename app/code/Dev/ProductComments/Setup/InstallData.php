@@ -1,6 +1,6 @@
 <?php
 
-namespace Dev\ProductComment\Setup;
+namespace Dev\ProductComments\Setup;
 
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
@@ -43,8 +43,8 @@ class InstallData implements InstallDataInterface
                 'type' => 'varchar',
                 'label' => 'Allow Product Comments',
                 'input' => 'select',
-                'source' => \Dev\ProductComment\Model\Attribute\Source\Comment::class,
-                'frontend' => \Dev\ProductComment\Model\Attribute\Frontend\Comment::class,
+                'source' => \Dev\ProductComments\Model\Attribute\Source\Comment::class,
+                'frontend' => \Dev\ProductComments\Model\Attribute\Frontend\Comment::class,
                 'required' => false,
                 'sort_order' => 50,
                 'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,

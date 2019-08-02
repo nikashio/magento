@@ -1,6 +1,6 @@
 <?php
 
-namespace Dev\ProductComment\Block;
+namespace Dev\ProductComments\Block;
 
 
 use Magento\Framework\View\Element\Template;

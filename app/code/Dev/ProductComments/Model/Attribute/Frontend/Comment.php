@@ -1,5 +1,5 @@
 <?php
-namespace Dev\ProductComment\Model\Attribute\Frontend;
+namespace Dev\ProductComments\Model\Attribute\Frontend;
 
 class Comment extends \Magento\Eav\Model\Entity\Attribute\Frontend\AbstractFrontend
 {
