@@ -13,7 +13,7 @@ class InstallData implements InstallDataInterface
 {
     /**
      * Eav setup factory
-     * @var EavSetupFactory
+     * @var EavSetupFactoryProductComment
      */
     private $eavSetupFactory;
 

@@ -87,6 +87,12 @@ class Comments extends Template implements BlockInterface
     }
 
 
-
-
+    public function getCommentCollection($productId)
+    {
+        $comment = $this->commentFactory->create();
+        $collection = $comment->getCollection()
+            ->addFilter('product_id', $productId)
+            ->addFilter("status", 1);
+        return $collection;
+    }
 }

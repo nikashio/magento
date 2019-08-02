@@ -1,5 +1,46 @@
+<?php
+/**
+ * @var $block \Dev\ProductComments\Block\View
+ */
+    $currentProduct = $block->getCurrentProduct();
+    $productId =  $currentProduct->getId();
+    $commentsAvailable = $currentProduct->getData('ProductComment');
+    $comments = $block->getCommentCollection($productId);
 
-<form class="form" id="custom-form" action="" data-mage-init='{"validation": {}}' method="post" autocomplete="off">
+if (count($comments) > 0): ?>
+    <div class="block review-list">
+        <div class="block-title">
+            <strong>Product Comments</strong>
+        </div>
+        <?php foreach ($comments as $item): ?>
+            <div class="block-content">
+                <ol class="items review-items">
+                    <li class="item review-item" itemscope="" itemprop="review" itemtype="http://schema.org/Review">
+                        <div class="review-content" itemprop="description"><?php echo $item->getData("body"); ?></div>
+                        <div class="review-details">
+                            <p class="review-author">
+                                <span class="review-details-label">Commented by</span>
+                                <strong class="review-details-value"
+                                        itemprop="author"><?php echo $item->getData("name"); ?></strong>
+                            </p>
+                            <p><?php echo $item->getData("comment")?></p>
+                            <br>
+                            <p class="review-date">
+                                <span class="review-details-label">Posted on</span>
+                                <time class="review-details-value"
+                                      itemprop="datePublished"><?php echo date('m/j/Y', strtotime($item->getData("date"))); ?></time>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif;
+    if($commentsAvailable == 'yes') :
+?>
+
+<form class="form" id="custom-form" action="<?=$block->getUrl('commentvisibility/index/sendComment')?>" data-mage-init='{"validation": {}}' method="post" autocomplete="off">
     <fieldset class="fieldset">
         <div class="field required">
             <label for="name" class="label"><span><?php echo __('Name') ?></span></label>
@@ -18,10 +59,14 @@
             <textarea name="comment" id="comment" value="" title="<?php echo  __('Comment') ?>" class="input-text" data-validate="{required:true}"></textarea>
         </div>
     </fieldset>
-<!--    <input type="hidden" id="product_id" name="productId" value="--><?php //echo $productId ?><!--">-->
+    <input type="hidden" id="product_id" name="productId" value="<?php echo $productId ?>">
     <div class="actions-toolbar">
         <div class="primary">
             <button type="submit" class="action submit primary" title="<?php  echo __('Submit') ?>"><span><?php echo __('Submit') ?></span></button>
         </div>
     </div>
 </form>
+    <?php else : ?>
+        <p> Comments ara  Disabled for this Product </p>
+    <?php endif; ?>
+
