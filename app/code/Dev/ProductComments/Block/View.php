@@ -24,8 +24,12 @@ class View extends Template
      * @param CollectionFactory $commentFactory
      * @param array $data
      */
-    public function __construct(Template\Context $context, Registry $registry,CollectionFactory $commentFactory, array $data = [])
-    {
+    public function __construct(
+        Template\Context $context,
+        Registry $registry,
+        CollectionFactory $commentFactory,
+        array $data = []
+    ) {
         parent::__construct($context, $data);
         $this->registry = $registry;
         $this->commentFactory = $commentFactory;

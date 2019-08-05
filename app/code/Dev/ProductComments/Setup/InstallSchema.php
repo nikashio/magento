@@ -12,10 +12,14 @@ class InstallSchema implements InstallSchemaInterface
 {
     /**
      * {@inheritdoc}
+     *
      * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */
-    public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)
-    {
+
+    public function install(
+        SchemaSetupInterface $setup,
+        ModuleContextInterface $context
+    ) {
 
         try {
             $table = $setup->getConnection()
@@ -24,7 +28,8 @@ class InstallSchema implements InstallSchemaInterface
                     'comment_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+                    ['identity' => true, 'unsigned' => true,
+                        'nullable' => false, 'primary' => true],
                     'Comment ID'
                 )->addColumn(
                     'product_id',
@@ -51,7 +56,9 @@ class InstallSchema implements InstallSchemaInterface
                     'date',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
                     null,
-                    ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT],
+                    ['nullable' => false,
+                        'default' =>
+                            \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT],
                     'Date'
                 )
                 ->addColumn(

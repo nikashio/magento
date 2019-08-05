@@ -70,7 +70,10 @@ class SendComment extends Action
                     $this->resourceModel->save($this->commentModel);
                 } catch (\Exception $e) {
                 }
-                $this->messageManager->addSuccessMessage('Comment request has been sent. Wait for admin approval');
+                $this->messageManager
+                    ->addSuccessMessage(
+                        'Comment request has been sent. Wait for admin approval'
+                    );
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
             }

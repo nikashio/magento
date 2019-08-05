@@ -37,9 +37,9 @@ class Comments extends Template implements BlockInterface
 
     /**
      * Posts constructor.
-     * @param Template\Context $context
-     * @param ProductRepositoryInterface $productRepository
-     * @param SearchCriteriaBuilder $criteriaBuilder
+     * @param  Template\Context                  $context
+     * @param ProductRepositoryInterface        $productRepository
+     * @param SearchCriteriaBuilder             $criteriaBuilder
      * @param Image $imageHelper
      * @param \Magento\Directory\Model\Currency $currency
      * @param array $data
@@ -50,8 +50,8 @@ class Comments extends Template implements BlockInterface
         SearchCriteriaBuilder $criteriaBuilder,
         Image $imageHelper,
         \Magento\Directory\Model\Currency $currency,
-        array $data = [])
-    {
+        array $data = []
+    ) {
         parent::__construct($context, $data);
         $this->productRepository = $productRepository;
         $this->criteriaBuilder = $criteriaBuilder;
@@ -75,7 +75,10 @@ class Comments extends Template implements BlockInterface
 
     public function getItemImage($product)
     {
-        $imageUrl = $this->imageHelper->init($product, 'product_base_image')->getUrl();
+        $imageUrl = $this
+            ->imageHelper
+            ->init($product, 'product_base_image')
+            ->getUrl();
         return $imageUrl;
     }
 

@@ -1,11 +1,12 @@
 <?php
 namespace Dev\ProductComments\Controller\Index;
 
+use Magento\Framework\App\Action\Action;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
-class Index extends \Magento\Framework\App\Action\Action
+class Index extends Action
 {
     protected $resultPageFactory;
 
@@ -18,7 +19,9 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
 
-        /** @var \Magento\Framework\View\Result\Page $page */
+        /**
+         * @var \Magento\Framework\View\Result\Page $page
+         */
         $page = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         return $page;
     }

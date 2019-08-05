@@ -1,11 +1,9 @@
 <?php
-
-namespace Dev\ProductComments\Setup;
+namespace Dev\ProductComment\Setup;
 
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
-
 /**
  * @codeCoverageIgnore
  */
@@ -13,10 +11,10 @@ class InstallData implements InstallDataInterface
 {
     /**
      * Eav setup factory
-     * @var EavSetupFactoryProductComment
+     *
+     * @var EavSetupFactory
      */
     private $eavSetupFactory;
-
     /**
      * Init
      * @param EavSetupFactory $eavSetupFactory
@@ -25,15 +23,20 @@ class InstallData implements InstallDataInterface
     {
         $this->eavSetupFactory = $eavSetupFactory;
     }
-
     /**
      * {@inheritdoc}
-     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     *
+     *  @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     *
      * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     *
      * @SuppressWarnings(PHPMD.NPathComplexity)
+     *
      */
-    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
-    {
+    public function install(
+        ModuleDataSetupInterface $setup,
+        ModuleContextInterface $context
+    ) {
         $eavSetup = $this->eavSetupFactory->create();
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
@@ -41,7 +44,7 @@ class InstallData implements InstallDataInterface
             [
                 'group' => 'General',
                 'type' => 'varchar',
-                'label' => 'Allow Product Comments',
+                'label' => 'Product',
                 'input' => 'select',
                 'source' => \Dev\ProductComments\Model\Attribute\Source\Comment::class,
                 'frontend' => \Dev\ProductComments\Model\Attribute\Frontend\Comment::class,
@@ -53,7 +56,7 @@ class InstallData implements InstallDataInterface
                 'is_filterable_in_grid' => false,
                 'visible' => true,
                 'is_html_allowed_on_front' => true,
-                'visible_on_front' => false,
+                'visible_on_front' => false
             ]
         );
     }
