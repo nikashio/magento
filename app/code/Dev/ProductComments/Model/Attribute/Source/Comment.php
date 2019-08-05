@@ -1,6 +1,6 @@
 <?php
 
-namespace Dev\ProductComment\Model\Attribute\Source;
+namespace Dev\ProductComments\Model\Attribute\Source;
 
 class Comment extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource
 {

@@ -1,5 +1,4 @@
 <?php
-
 namespace Dev\ProductComment\Setup;
 
 use Magento\Framework\Setup\InstallDataInterface;
@@ -13,27 +12,32 @@ class InstallData implements InstallDataInterface
 {
     /**
      * Eav setup factory
+     *
      * @var EavSetupFactory
      */
     private $eavSetupFactory;
-
     /**
      * Init
+     *
      * @param EavSetupFactory $eavSetupFactory
      */
     public function __construct(\Magento\Eav\Setup\EavSetupFactory $eavSetupFactory)
     {
         $this->eavSetupFactory = $eavSetupFactory;
     }
-
     /**
      * {@inheritdoc}
+     *
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     *
      * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     *
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
-    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
-    {
+    public function install(
+        ModuleDataSetupInterface $setup,
+        ModuleContextInterface $context
+    ) {
         $eavSetup = $this->eavSetupFactory->create();
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
@@ -43,8 +47,8 @@ class InstallData implements InstallDataInterface
                 'type' => 'varchar',
                 'label' => 'Product',
                 'input' => 'select',
-                'source' => \Dev\ProductComment\Model\Attribute\Source\Comment::class,
-                'frontend' => \Dev\ProductComment\Model\Attribute\Frontend\Comment::class,
+                'source' => \Dev\ProductComments\Model\Attribute\Source\Comment::class,
+                'frontend' => \Dev\ProductComments\Model\Attribute\Frontend\Comment::class,
                 'required' => false,
                 'sort_order' => 50,
                 'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
