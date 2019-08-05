@@ -19,11 +19,11 @@ class SendComment extends Action
      * @var ResourceComment
      */
     private $resourceModel;
-
     /**
      * SendComment constructor.
-     * @param Context $context
-     * @param Comment $commentModel
+     *
+     * @param Context         $context
+     * @param Comment         $commentModel
      * @param ResourceComment $resourceModel
      */
     public function __construct(
@@ -35,7 +35,6 @@ class SendComment extends Action
         $this->commentModel = $commentModel;
         $this->resourceModel = $resourceModel;
     }
-
     public function execute()
     {
         $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
@@ -44,17 +43,16 @@ class SendComment extends Action
         $comment = $this->getRequest()->getParam('comment');
         $productId = $this->getRequest()->getParam('productId');
 
-
         try {
             if (!\Zend_Validate::is($name, 'NotEmpty')) {
                 $this->messageManager->addErrorMessage('Name can not be Empty');
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
-            } else if (!\Zend_Validate::is($comment, 'NotEmpty')) {
+            } elseif (!\Zend_Validate::is($comment, 'NotEmpty')) {
                 $this->messageManager->addErrorMessage('Comment can not be Empty');
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
-            } else if (!\Zend_Validate::is($email, 'EmailAddress')) {
+            } elseif (!\Zend_Validate::is($email, 'EmailAddress')) {
                 $this->messageManager->addErrorMessage('Email address not valid');
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
@@ -80,6 +78,5 @@ class SendComment extends Action
         } catch (\Zend_Validate_Exception $e) {
         }
         exit;
-
     }
 }

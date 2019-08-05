@@ -19,11 +19,12 @@ class View extends Template
 
     /**
      * View constructor.
-     * @param Template\Context $context
-     * @param Registry $registry
+     * @param Template\Context  $context
+     * @param Registry          $registry
      * @param CollectionFactory $commentFactory
-     * @param array $data
+     * @param array             $data
      */
+
     public function __construct(
         Template\Context $context,
         Registry $registry,
@@ -40,18 +41,13 @@ class View extends Template
         return $this->registry->registry('current_product');
     }
 
-
     public function getCommentCollection($productId)
     {
         $comment = $this->commentFactory->create();
         $collection = $comment
-            ->addFieldToFilter("product_id", $productId)
-            ->addFieldToFilter("status", "approved")
+            ->addFieldToFilter('product_id', $productId)
+            ->addFieldToFilter('status', 'approved')
             ->getItems();
         return $collection;
     }
-
-
-
-
 }

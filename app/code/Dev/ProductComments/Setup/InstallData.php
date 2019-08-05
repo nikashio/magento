@@ -4,6 +4,7 @@ namespace Dev\ProductComment\Setup;
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
+
 /**
  * @codeCoverageIgnore
  */
@@ -17,6 +18,7 @@ class InstallData implements InstallDataInterface
     private $eavSetupFactory;
     /**
      * Init
+     *
      * @param EavSetupFactory $eavSetupFactory
      */
     public function __construct(\Magento\Eav\Setup\EavSetupFactory $eavSetupFactory)
@@ -26,12 +28,11 @@ class InstallData implements InstallDataInterface
     /**
      * {@inheritdoc}
      *
-     *  @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      *
      * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      *
      * @SuppressWarnings(PHPMD.NPathComplexity)
-     *
      */
     public function install(
         ModuleDataSetupInterface $setup,

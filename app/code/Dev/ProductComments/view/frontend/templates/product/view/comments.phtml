@@ -18,12 +18,11 @@ if (count($comments) > 0): ?>
                     <li class="item review-item" itemscope="" itemprop="review" itemtype="http://schema.org/Review">
                         <div class="review-content" itemprop="description"><?php echo $item->getData("body"); ?></div>
                         <div class="review-details">
-                            <p class="review-author">
+                            <p class="review-author"></p>
+                            <p><b><?php echo $item->getData("comment")?></b></p>
                                 <span class="review-details-label">Commented by</span>
-                                <strong class="review-details-value"
-                                        itemprop="author"><?php echo $item->getData("name"); ?></strong>
-                            </p>
-                            <p><?php echo $item->getData("comment")?></p>
+                                <span class="review-details-value"
+                                        itemprop="author"><?php echo $item->getData("name"); ?></span>
                             <br>
                             <p class="review-date">
                                 <span class="review-details-label">Posted on</span>

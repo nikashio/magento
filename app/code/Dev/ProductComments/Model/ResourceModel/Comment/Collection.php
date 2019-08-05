@@ -3,6 +3,8 @@
 namespace Dev\ProductComments\Model\ResourceModel\Comment;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
+use Dev\ProductComments\Model\Comment;
+use Dev\ProductComments\Model\ResourceModel\Comment  as ResourceComment;
 
 class Collection extends AbstractCollection
 {
@@ -15,12 +17,11 @@ class Collection extends AbstractCollection
      *
      * @return void
      */
-    protected function construct()
+    protected function _construct()
     {
         $this->_init(
-            'Dev\ProductComments\Model\Comment',
-            'Dev\ProductComments\Model\ResourceModel\Comment'
+            Comment::class,
+            ResourceComment::class
         );
     }
-
 }
