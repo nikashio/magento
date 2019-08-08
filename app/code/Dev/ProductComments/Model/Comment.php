@@ -4,6 +4,7 @@ namespace Dev\ProductComments\Model;
 
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Model\AbstractModel;
+use Dev\ProductComments\Model\ResourceModel\Comment as Commentfactory;
 
 class Comment extends AbstractModel implements IdentityInterface
 {
@@ -15,7 +16,7 @@ class Comment extends AbstractModel implements IdentityInterface
 
     protected function _construct()
     {
-        $this->_init('Dev\ProductComments\Model\ResourceModel\Comment');
+        $this->_init(Commentfactory::class);
     }
 
     public function getIdentities()
@@ -25,8 +26,6 @@ class Comment extends AbstractModel implements IdentityInterface
 
     public function getDefaultValues()
     {
-        $values = [];
-
-        return $values;
+        return [];
     }
 }

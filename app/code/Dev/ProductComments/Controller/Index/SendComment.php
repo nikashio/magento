@@ -4,10 +4,13 @@ namespace Dev\ProductComments\Controller\Index;
 
 use Dev\ProductComments\Model\Comment;
 use Dev\ProductComments\Model\ResourceModel\Comment as ResourceComment;
+use Exception;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Message\ManagerInterface;
+use Zend_Validate;
+use Zend_Validate_Exception;
 
 class SendComment extends Action
 {
@@ -44,17 +47,18 @@ class SendComment extends Action
         $comment = $this->getRequest()->getParam('comment');
         $productId = $this->getRequest()->getParam('productId');
 
-
         try {
-            if (!\Zend_Validate::is($name, 'NotEmpty')) {
+            if (!Zend_Validate::is($name, 'NotEmpty')) {
                 $this->messageManager->addErrorMessage('Name can not be Empty');
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
-            } else if (!\Zend_Validate::is($comment, 'NotEmpty')) {
+            }
+
+            if (!Zend_Validate::is($comment, 'NotEmpty')) {
                 $this->messageManager->addErrorMessage('Comment can not be Empty');
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
-            } else if (!\Zend_Validate::is($email, 'EmailAddress')) {
+            } elseif (!Zend_Validate::is($email, 'EmailAddress')) {
                 $this->messageManager->addErrorMessage('Email address not valid');
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
@@ -68,7 +72,7 @@ class SendComment extends Action
 
                 try {
                     $this->resourceModel->save($this->commentModel);
-                } catch (\Exception $e) {
+                } catch (Exception $e) {
                 }
                 $this->messageManager
                     ->addSuccessMessage(
@@ -77,9 +81,8 @@ class SendComment extends Action
                 $resultRedirect->setUrl($this->_redirect->getRefererUrl());
                 return $resultRedirect;
             }
-        } catch (\Zend_Validate_Exception $e) {
+        } catch (Zend_Validate_Exception $e) {
         }
         exit;
-
     }
 }

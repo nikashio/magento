@@ -1,4 +1,7 @@
-<?php \Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE, 'Dev_ProductComments',
+<?php use Magento\Framework\Component\ComponentRegistrar;
+
+ComponentRegistrar::register(
+    ComponentRegistrar::MODULE,
+    'Dev_ProductComments',
     __DIR__
 );

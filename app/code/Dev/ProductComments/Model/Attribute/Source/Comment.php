@@ -2,10 +2,13 @@
 
 namespace Dev\ProductComments\Model\Attribute\Source;
 
-class Comment extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource
+use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
+
+class Comment extends AbstractSource
 {
     /**
      * Get all options
+     *
      * @return array
      */
     public function getAllOptions()

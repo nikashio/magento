@@ -1,7 +1,10 @@
 <?php
 /**
- * @var $block \Dev\ProductComments\Block\Widget\Comments
+ * @var $block Comments
  */
+
+use Dev\ProductComments\Block\Widget\Comments;
+
 ?>
 <?php if($block->getData('comments')) ?>
     <h2 class='posts'><?php echo $block->getData('comments'); ?></h2>
